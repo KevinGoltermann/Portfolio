@@ -51,6 +51,10 @@ class BlogsController < ApplicationController
     end
   end
 
+  def toggle_status
+    byebug
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
