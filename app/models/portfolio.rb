@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Portfolio < ApplicationRecord
-  has_many :technologies
+  has_many :technologies, dependent: :destroy
   accepts_nested_attributes_for :technologies,
                                 reject_if: ->(attrs) { attrs['name'].blank? }
   include Placeholder
