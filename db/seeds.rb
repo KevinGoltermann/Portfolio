@@ -1,11 +1,12 @@
 # frozen_string_literal: true
+
 3.times do |x|
   Topic.create!(
     title: "Topic #{x}"
-    )
+  )
 end
 
-puts "3 Topics created"
+puts '3 Topics created'
 
 10.times do |x|
   Blog.create!(
@@ -29,25 +30,22 @@ puts '5 Skills created'
 8.times do |x|
   Portfolio.create!(
     title: "Portfolio title: #{x}",
-    subtitle: "Ruby on Rails",
+    subtitle: 'Ruby on Rails',
     body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     main_image: 'https://via.placeholder.com/600x400',
     thumb_image: 'https://via.placeholder.com/350x150'
-
   )
 end
 
 puts '8 portfolio items created'
 
-1.times do |x|
-  Portfolio.create!(
-    title: "Portfolio title: #{x}",
-    subtitle: "Angular",
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    main_image: 'https://via.placeholder.com/600x400',
-    thumb_image: 'https://via.placeholder.com/350x150'
-  )
-end
+Portfolio.create!(
+  title: 'Portfolio title: 0',
+  subtitle: 'Angular',
+  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  main_image: 'https://via.placeholder.com/600x400',
+  thumb_image: 'https://via.placeholder.com/350x150'
+)
 
 puts '1 portfolio item created'
 
