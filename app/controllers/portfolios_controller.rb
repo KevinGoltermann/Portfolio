@@ -3,6 +3,7 @@
 class PortfoliosController < ApplicationController
   def index
     @portfolio_items = Portfolio.all
+    @page_title = "Portfolios"
   end
 
   def angular
@@ -12,6 +13,11 @@ class PortfoliosController < ApplicationController
   def new
     @portfolio_item = Portfolio.new
     3.times { @portfolio_item.technologies.build } 
+  end
+
+  def show
+    @portfolio_item = Portfolio.find(params[:id])
+    @page_title = @portfolio_item.title
   end
 
   def create
@@ -40,10 +46,6 @@ class PortfoliosController < ApplicationController
         format.html { render :edit, status: :unprocessable_entity }
       end
     end
-  end
-
-  def show
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def destroy
