@@ -1,22 +1,3 @@
 <h1>Edit this Portfolio item</h1>
 
-<%= form_with(model: @portfolio_item, local: true) do |x| %>
-  <div class="field">
-    <%= x.label :title %>
-    <%= x.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= x.label :subtitle %>
-    <%= x.text_field :subtitle %>
-  </div>
-
-  <div class="field">
-    <%= x.label :body %>
-    <%= x.text_area :body %>
-  </div>
-
-  <div class="actions">
-    <%= x.submit %>
-  </div>
-<% end %>
+<%= render 'form', portfolio_item: @portfolio_item %>
