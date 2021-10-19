@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/KevinGoltermann/KevGol-View-Tool
+  revision: 4c5af38a37f799ad37ad40e48a674cd2ef591409
+  specs:
+    kevgol_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -221,6 +227,7 @@ DEPENDENCIES
   friendly_id (~> 5.4.0)
   jbuilder (~> 2.7)
   jquery-rails (~> 4.3, >= 4.3.1)
+  kevgol_view_tool!
   listen (~> 3.3)
   pg (~> 1.1)
   pry-byebug

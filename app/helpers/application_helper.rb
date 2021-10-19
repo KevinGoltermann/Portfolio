@@ -19,4 +19,8 @@ module ApplicationHelper
     	end 		
 	end
 
+ 	def copyright_generator
+		@copyright = KevgolViewTool::Renderer.copyright 'Kevin Goltermann', "All Rights Reserved"
+ 	end
+
 end
