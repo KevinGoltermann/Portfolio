@@ -32,15 +32,11 @@
 
   <body class="d-flex h-100 text-center text-white bg-dark">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <%= render "shared/application_nav"%>
-
-      <%= login_helper %>  
+      <%= render "shared/application_nav" %>
 
       <%= yield %>
 
-      <footer class="mt-auto text-white-50">
-        <%= copyright_generator %>
-      </footer>  
+      <%= render "shared/application_footer" %>
 
       <%= source_helper("application") %>  
     </div>
