@@ -30,18 +30,19 @@
     </style>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <%= render "shared/application_nav"%>
 
-    <%= render "shared/nav", location: 'top' %>
+      <%= login_helper %>  
 
-    <%= login_helper %>
+      <%= yield %>
 
-    <%= yield %>
+      <footer class="mt-auto text-white-50">
+        <%= copyright_generator %>
+      </footer>  
 
-    <%= copyright_generator %>
-
-    <%= source_helper("application") %>
+      <%= source_helper("application") %>  
+    </div>
   </body>
 </html>
