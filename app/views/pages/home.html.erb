@@ -1,5 +1,13 @@
 <main class="px-3">
-	<h1>Hi! Welcome to my site</h1>
+<!-- 	<h1>Hi <%= current_user.first_name %>! Welcome to my site</h1> -->
+
+	<h1>
+		<% if current_user.is_a?(GuestUser) %>
+			Hi! Welcome to my site
+		<% elsif current_user.is_a?(User) %>
+			Hi <%= current_user.first_name %>! Welcome to my site
+		<% end %>
+	</h1>
 	<hr>
 	<p class="lead">I have designed this site to act as a resume of sorts and host links to all the projects I have designed and built. Both this site and my other projects are constantly evolving to keep up with the latest and greatest, and I am proud to be able to show off my work. Please look around and reach out to me with any questions!</p>
 	<p class="lead">
